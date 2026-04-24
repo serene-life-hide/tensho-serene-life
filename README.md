@@ -1,2 +1,10 @@
-# tensho-serene-life
-Analog &amp; Digi Atelier @ Setouchi Island
+# Tensho Serene Life
+
+Analog & Digi Atelier @ Setouchi Island
+
+## コンセプト
+伝統的な芸術（水墨画・篆刻・表装）と、現代のデジタル技術を編み合わせ、
+穏やかな島の暮らしの中から生命の輝きを世界へと循環させていく場所。
+
+## 現在の状態
+2026年4月、デジタル母港を開港。現在ホームページ制作中。
