@@ -109,17 +109,15 @@ left: 0;
 width: 100%;    
 height: 100%;    
 border: none;
-}
-/* --- Video Label おもてなし Style --- */
 .video-label {
-    position: absolute; /* 動画の上に重ねる魔法 */
-    bottom: 10px;      /* 下から10px */
-    right: 15px;       /* 右から15px */
-    background: rgba(255, 255, 255, 0.7); /* 少し透ける白背景で上品に */
+    position: absolute;
+    bottom: 20px;       /* 下からの距離を少し広げて、ゆとりを */
+    left: 50%;          /* まず左端を真ん中（50%）に持ってくる */
+    transform: translateX(-50%); /* 自分の幅の半分だけ左に戻して、完璧な中央に */
+    background: rgba(255, 255, 255, 0.8);
     color: var(--text-main);
-    padding: 4px 12px;
-    font-size: 0.75rem;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-    pointer-events: none; /* マウスが当たっても動画操作を邪魔しない */
+    padding: 6px 16px;  /* 少し余白を広げて、呼吸しやすく */
+    font-size: 0.8rem;
+    border-radius: 20px; /* 角を丸くすると、より親しみやすい印象に */
+    white-space: nowrap; /* 文字が途中で改行されないように守る */
 }
