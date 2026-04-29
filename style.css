@@ -110,4 +110,16 @@ width: 100%;
 height: 100%;    
 border: none;
 }
-
+/* --- Video Label おもてなし Style --- */
+.video-label {
+    position: absolute; /* 動画の上に重ねる魔法 */
+    bottom: 10px;      /* 下から10px */
+    right: 15px;       /* 右から15px */
+    background: rgba(255, 255, 255, 0.7); /* 少し透ける白背景で上品に */
+    color: var(--text-main);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    pointer-events: none; /* マウスが当たっても動画操作を邪魔しない */
+}
