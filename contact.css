@@ -1,0 +1,89 @@
+/* 変数と基本設定 */
+:root {
+  --primary-purple: #460e44; /* 紫紺 */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-gray: #f9f9f9;
+}
+
+body {
+  font-family: 'Hiragino Mincho ProN', 'serif';
+  line-height: 2.0; /* 少し広げて読みやすく */
+  letter-spacing: 0.05em;
+}
+
+#page {
+  max-width: 700px; /* 読みやすい幅に絞る */
+  margin: 0 auto;
+  padding: 100px 20px; /* 上下の余白を大胆に */
+}
+
+/* おもてなしの言葉 */
+h3 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* フォームの調整 */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 項目間の「間」 */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0; /* 角を丸めず、端正に */
+  background-color: var(--accent-gray);
+  box-sizing: border-box; /* 幅の計算を正確に */
+  font-family: inherit;
+}
+
+textarea {
+  height: 200px;
+  resize: vertical; /* 縦方向のみ調整可能 */
+}
+
+/* 一筆認めるボタン */
+button {
+  background-color: var(--primary-purple);
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  letter-spacing: 0.2em;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+/* 成功メッセージのエリア */
+#success-message {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9fbf9; /* ほんのり緑がかった白 */
+    border: 1px solid #e0eee0;
+    margin-top: 2rem;
+}
+
+/* 戻るボタン（安心の緑：青磁色 #81a39d） */
+.btn-success {
+    background-color: #81a39d; 
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: background 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #6d8c87;
+}

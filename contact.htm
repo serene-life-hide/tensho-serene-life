@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一筆認める | Tensho Serene Life</title>
+    <!-- 既存のstyle.cssと、今回の専用CSSを両方読み込む -->
+    <link href="style.css" rel="stylesheet">
+    <link href="contact.css" rel="stylesheet">
+</head>
+<body class="contact-body">
+    <div id="page">
+        <main>
+            <section class="contact-header">
+                <h1>Tensho Serene Life</h1>
+                <h2>Contact Form</h2>
+                <div class="omotenashi-text">
+                    <p>瀬戸内の島時間に合わせた返信になります。</p>
+                    <p>凪の海を眺めるようにお待ちいただければ幸いです。</p>
+                </div>
+            </section>
+
+            <!-- 送信完了メッセージ（初期は隠す） -->
+            <div id="success-message" style="display: none;">
+                <div class="success-content">
+                    <h3>一筆、確かに承りました。</h3>
+                    <p>ありがとうございます。静かな時をお過ごしください。</p>
+                    <button class="btn-success" onclick="location.href='index.htm'">美術館へ戻る</button>
+                </div>
+            </div>
+
+            <!-- フォーム本体 -->
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- ここにWeb3Formsで発行したアクセスキーを入れます -->
+                <input type="hidden" name="access_key" value="aac54bde-2d7a-477b-b2eb-ad82ac22aa80">
+                
+                <input type="text" name="name" placeholder="お名前" required>
+                <input type="email" name="email" placeholder="メールアドレス" required>
+                <input type="text" name="subject" placeholder="件名" required>
+                <textarea name="message" placeholder="メッセージ" required></textarea>
+
+                <button type="submit" id="submit-btn">一筆認める</button>
+            </form>
+        </main>
+
+        <footer>
+            <address>Copyright &copy; 2026- Tensho Serene Life All Rights Reserved.</address>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+const successMsg = document.getElementById('success-message');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // ページ遷移を止める
+    const formData = new FormData(form);
+    
+    // Web3Formsへデータを送信
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            form.style.display = 'none'; // フォームを隠す
+            successMsg.style.display = 'block'; // 成功メッセージを出す
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
+    </script>
+</body>
+</html>
